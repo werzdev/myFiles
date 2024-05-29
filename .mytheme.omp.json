@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "God",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "background": "#434343",
+          "foreground": "#ff0000",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "macos": "\uf179 ",
+            "ubuntu": "\uf31b ",
+            "windows": "\uf871 "
+          },
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}{{ .UserName }}"
+        },
+        {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "background": "#ff0000",
+          "foreground": "#222222",
+          "template": " \uf489 {{ .Name }} "
+        },
+        {
+          "type": "spotify",
+          "style": "powerline",
+          "background": "#1BD760",
+          "foreground": "#434343",
+          "powerline_symbol": "\ue0b0",
+          "template": " \uf9c6 {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} "
+        },
+        {
+          "type": "sysinfo",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "background": "#5f76e9",
+          "foreground": "#434343",
+          "leading_diamond": "\ue0b0",
+          "template": " \uf85a MEM: {{ round .PhysicalPercentUsed .Precision }}% | {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB \uf85a ",
+          "trailing_diamond": "<transparent,#516BEB>\ue0b2</>"
+
+        },
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "background": "#fbbffd",
+          "foreground": "#434343",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "template": " \ufa1e {{ .FormattedMs }} <#fbbffd,transparent>\ue0b4</>"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#17D7A0",
+          "foreground": "#011627",
+          "leading_diamond": "\ue0b2",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "style": "diamond",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "\u256d\u2500",
+          "type": "text"
+        },
+        {
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "plain",
+          "template": " \u2665 {{ .CurrentDate | date .Format }} |",
+          "type": "time"
+        },
+        {
+          "style": "plain",
+          "template": " \uf292 ",
+          "type": "root"
+        },
+        {
+          "properties": {
+            "folder_icon": "\uf07b ",
+            "folder_separator_icon": " \uf554 ",
+            "home_icon": "\uf7db "
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u2570\u2500 ",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#FEF5ED",
+    "template": "\ue285 "
+  }
+}
