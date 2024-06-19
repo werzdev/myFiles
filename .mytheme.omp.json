@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
-  "final_space": true,
   "console_title_template": "God",
+  "final_space": true,
+  "version": 2,
   "blocks": [
     {
       "type": "prompt",
@@ -27,7 +27,7 @@
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
           "background": "#ff0000",
-          "foreground": "#222222",
+          "foreground": "#011627",
           "template": " \uf489 {{ .Name }} "
         },
         {
