@@ -1,0 +1,53 @@
+/* Werzdev */
+@define-color primary         #D6B4FC;
+@define-color secondary       #B095E1;
+@define-color background      #1F1F1F;
+@define-color surface         #2C2C2C;
+@define-color on_surface      #EDEDED;
+@define-color neutral         #444444;
+@define-color accent          #A3F7BF;
+@define-color alert           #FF6B31;
+@define-color success         #98FF98;
+
+@define-color yellow          #EFDFA3;
+
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+/* Main Colors */
+@define-color shadow          shade(@background, 0.5);
+@define-color main-fg         @on_surface;
+@define-color main-bg         @background;
+@define-color main-br         @neutral;
+
+@define-color active-bg       @primary;
+@define-color active-fg       @surface;
+
+@define-color hover-bg        @surface;
+@define-color hover-fg        alpha(@secondary, 0.75);
+
+/* Module Colors */
+@define-color module-fg       @on_surface;
+@define-color workspaces      @background;
+
+@define-color temperature     @background;
+@define-color memory          @background;
+@define-color cpu             @background;
+@define-color distro-fg       @background;
+@define-color distro-bg       @primary;
+@define-color time            @background;
+@define-color date            @background;
+@define-color tray            @background;
+
+@define-color pulseaudio      @background;
+@define-color backlight       @background;
+@define-color battery         @background;
+@define-color power           @primary;
+
+/* State Colors */
+@define-color warning         @alert;
+@define-color critical        @alert;
+@define-color charging        @success;

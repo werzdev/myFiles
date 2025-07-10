@@ -1,0 +1,30 @@
+/* Werzdev */
+
+* {
+  primary:         #D6B4FC;
+  secondary:       #B095E1;
+  background:      #1F1F1F;
+  surface:         #2C2C2C;
+  onSurface:      #EDEDED;
+  neutral:         #444444;
+  accent:        #A3F7BF;
+  alert:       #FF6B31;
+  success:      #98FF98;
+
+  yellow:          #EFDFA3;
+}
+
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+* {
+  main-bg:        @surface;
+  main-fg:        @onSurface;
+  main-br:        @onSurface;
+  input-bg:       @neutral;
+  select-bg:      @neutral;
+  select-fg:      @primary;
+}

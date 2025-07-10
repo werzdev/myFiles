@@ -1,0 +1,18 @@
+:root {
+  /* Primary brand colors */
+  --color-primary: #d6b4fc;
+  --color-secondary: #b095e1;
+
+  /* Background and surfaces */
+  --color-background: #1f1f1f;
+  --color-surface: #2c2c2c;
+  --color-on-surface: #ededed;
+
+  /* Neutral tones */
+  --color-neutral: #444444;
+
+  /* Status & Utility colors */
+  --color-accent: #a3f7bf;
+  --color-danger: #ff6b31;
+  --color-success: #98ff98;
+}
